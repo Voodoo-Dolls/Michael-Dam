@@ -6,6 +6,7 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import Hero from "@/components/Hero/Hero";
+import Achievements from "@/components/Achievements/Achievements";
 
 // This component renders your homepage.
 //
@@ -36,6 +37,7 @@ export default async function Index() {
     <>
       <Hero />
       <SliceZone slices={home.data.slices} components={components} />
+      <Achievements />
     </>
   )
 }

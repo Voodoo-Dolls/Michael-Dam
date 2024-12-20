@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type PageDocumentDataSlicesSlice = SkillsSliderSlice | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -79,15 +79,15 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *RichText → Primary*
+ * Primary content in *RichText → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
   /**
-   * Content field in *RichText → Primary*
+   * Content field in *RichText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Lorem ipsum...
-   * - **API ID Path**: rich_text.primary.content
+   * - **API ID Path**: rich_text.default.primary.content
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   content: prismic.RichTextField;
@@ -123,12 +123,115 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
+/**
+ * Item in *SkillsSlider → Default → Primary → Skills*
+ */
+export interface SkillsSliderSliceDefaultPrimarySkillsItem {
+  /**
+   * Icon field in *SkillsSlider → Default → Primary → Skills*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills_slider.default.primary.skills[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Background Color field in *SkillsSlider → Default → Primary → Skills*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills_slider.default.primary.skills[].background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  background_color: prismic.ColorField;
+
+  /**
+   * Skill Name field in *SkillsSlider → Default → Primary → Skills*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills_slider.default.primary.skills[].skill_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  skill_name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *SkillsSlider → Default → Primary*
+ */
+export interface SkillsSliderSliceDefaultPrimary {
+  /**
+   * Skills field in *SkillsSlider → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills_slider.default.primary.skills[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  skills: prismic.GroupField<
+    Simplify<SkillsSliderSliceDefaultPrimarySkillsItem>
+  >;
+
+  /**
+   * Direction field in *SkillsSlider → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skills_slider.default.primary.direction
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  direction: prismic.NumberField;
+}
+
+/**
+ * Default variation for SkillsSlider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SkillsSliderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SkillsSliderSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SkillsSlider*
+ */
+type SkillsSliderSliceVariation = SkillsSliderSliceDefault;
+
+/**
+ * SkillsSlider Shared Slice
+ *
+ * - **API ID**: `skills_slider`
+ * - **Description**: SkillsSlider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SkillsSliderSlice = prismic.SharedSlice<
+  "skills_slider",
+  SkillsSliderSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
       options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
+  }
+
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>;
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>;
   }
 
   namespace Content {
@@ -141,6 +244,11 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      SkillsSliderSlice,
+      SkillsSliderSliceDefaultPrimarySkillsItem,
+      SkillsSliderSliceDefaultPrimary,
+      SkillsSliderSliceVariation,
+      SkillsSliderSliceDefault,
     };
   }
 }

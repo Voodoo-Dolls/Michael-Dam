@@ -16,18 +16,31 @@ export default function Hero() {
                     transition={{ duration: 0.5 }}
                     className="container flex flex-col p-4 lg:flex-row-reverse lg:items-center lg:justify-between">
                     {/* Image */}
-                    <div className="max-w-sm mx-auto mb-4 lg:mx-0 imgContainer aspect-square">
-                        <img
+                    <div className="w-full max-w-sm mx-auto mb-4 xl:max-w-xl lg:p-8 lg:mx-0 imgContainer aspect-square">
+                        <Image
                             src="https://picsum.photos/400"
                             className="rounded-full shadow-2xl"
+                            fill
+                            alt=""
                         />
                     </div>
-                    {/* Type Animation */}
                     <div>
                         <h1 className="min-h[115px] text-hero text-nowrap mb-6">
                             <span className="text-primary">
-                                👋 Hi, I'm<br></br>
+                                {/* Hand Animation */}
+                                <motion.div
+                                    animate={{ rotate: [0, 20, 0] }}
+                                    transition={{
+                                        duration: 3,
+                                        ease: "easeInOut",
+                                        repeat: Infinity,
+                                        repeatDelay: 0,
+                                    }} className="inline-block">
+                                    👋
+                                </motion.div>
+                                Hi, I&apos;m<br></br>
                             </span>
+                            {/* Type Animation */}
                             <TypeAnimation
                                 sequence={[
                                     "Michael",
@@ -46,11 +59,11 @@ export default function Hero() {
                         </h1>
                         {/* CTA */}
                         <div className="flex flex-wrap gap-4">
-                            <button className="rounded-full text-button btn btn-primary">
+                            <button className="text-black rounded-full text-button btn bg-primary border-primary">
                                 <MdAlternateEmail />
                                 Hire Me
                             </button>
-                            <button className="rounded-full text-button btn">
+                            <button className="rounded-full text-button btn border-primary text-primary">
                                 <GrDocumentPdf />
                                 Download CV
                             </button>

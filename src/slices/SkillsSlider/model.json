@@ -1,0 +1,57 @@
+{
+  "id": "skills_slider",
+  "type": "SharedSlice",
+  "name": "SkillsSlider",
+  "description": "SkillsSlider",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "skills": {
+          "type": "Group",
+          "config": {
+            "label": "Skills",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "background_color": {
+                "type": "Color",
+                "config": {
+                  "label": "Background Color",
+                  "placeholder": ""
+                }
+              },
+              "skill_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Skill Name",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "direction": {
+          "type": "Number",
+          "config": {
+            "label": "Direction",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
