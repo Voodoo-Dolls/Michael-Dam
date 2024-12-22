@@ -1,0 +1,13 @@
+.button:after {
+  transition: all ease-in-out 0.2s;
+  background: none repeat scroll 0 0 #ffffff;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+}
+
+.border:after {
+  width: 100%;
+  padding-right: 35px;
+}
