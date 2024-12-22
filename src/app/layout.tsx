@@ -3,6 +3,7 @@ import { repositoryName } from "@/prismicio";
 import { Quicksand } from 'next/font/google'
 import "./globals.css"
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const quickSand = Quicksand({
   subsets: ['latin'],
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
