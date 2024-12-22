@@ -15,7 +15,7 @@ import styles from "./Skills.module.css"
  * Component for "SkillsSlider" Slices.
  */
 const SkillsSlider = ({ slice }: any): JSX.Element => {
-  const animation = { duration: 7000, easing: (t: number) => t }
+  const animation = { duration: 10000, easing: (t: number) => t }
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -42,16 +42,17 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
           },
         },
       },
+      rtl: slice.primary.direction,
+
       created(s) {
-        s.moveToIdx(s.track.details.abs + -slice.primary.direction, true, animation)
-        // s.moveToIdx(slice.primary.direction, true, animation)
+        s.moveToIdx(1, true, animation)
       },
       updated(s) {
-        s.moveToIdx(s.track.details.abs + slice.primary.direction, true, animation)
+        s.moveToIdx(s.track.details.abs + 1, true, animation)
       },
       animationEnded(s) {
-        s.moveToIdx(s.track.details.abs + -slice.primary.direction, true, animation)
-      }
+        s.moveToIdx(s.track.details.abs + 1, true, animation)
+      },
     },
 
     [
@@ -62,9 +63,10 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="container p-4 mx-auto"
+      className={`container p-4 mx-auto`}
     >
       {/* Slider */}
+      {/* {slice.primary.direction && <h2>Skills</h2>} */}
       <div ref={sliderRef} className="text-black keen-slider">
         {slice.primary.skills.map((item: any, index: number) => (
           <div className="p-8 keen-slider__slide" key={index}>

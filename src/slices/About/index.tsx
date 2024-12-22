@@ -17,7 +17,6 @@ export type AboutProps = SliceComponentProps<Content.AboutSlice>;
 const About = ({ slice }: AboutProps): JSX.Element => {
   const [tab, setTab] = useState('Top Skills')
 
-  console.log(slice.primary.tabs[0])
   return (
     <section
       data-slice-type={slice.slice_type}

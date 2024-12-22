@@ -44,10 +44,12 @@
           }
         },
         "direction": {
-          "type": "Number",
+          "type": "Boolean",
           "config": {
             "label": "Direction",
-            "placeholder": ""
+            "placeholder_false": "Reverse",
+            "placeholder_true": "Default",
+            "default_value": true
           }
         }
       },

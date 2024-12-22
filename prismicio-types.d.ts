@@ -267,12 +267,13 @@ export interface SkillsSliderSliceDefaultPrimary {
   /**
    * Direction field in *SkillsSlider → Default → Primary*
    *
-   * - **Field Type**: Number
+   * - **Field Type**: Boolean
    * - **Placeholder**: *None*
+   * - **Default Value**: true
    * - **API ID Path**: skills_slider.default.primary.direction
-   * - **Documentation**: https://prismic.io/docs/field#number
+   * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  direction: prismic.NumberField;
+  direction: prismic.BooleanField;
 }
 
 /**

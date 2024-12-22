@@ -2,7 +2,7 @@
   aspect-ratio: 2 / 1;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .aspect {
     aspect-ratio: 3 / 1;
   }
