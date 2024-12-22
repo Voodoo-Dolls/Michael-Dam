@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | StatisiticsSlice
   | AboutSlice
   | SkillsSliderSlice
   | RichTextSlice;
@@ -306,6 +307,36 @@ export type SkillsSliderSlice = prismic.SharedSlice<
   SkillsSliderSliceVariation
 >;
 
+/**
+ * Default variation for Statisitics Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StatisiticsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Statisitics*
+ */
+type StatisiticsSliceVariation = StatisiticsSliceDefault;
+
+/**
+ * Statisitics Shared Slice
+ *
+ * - **API ID**: `statisitics`
+ * - **Description**: Statisitics
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StatisiticsSlice = prismic.SharedSlice<
+  "statisitics",
+  StatisiticsSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -345,6 +376,9 @@ declare module "@prismicio/client" {
       SkillsSliderSliceDefaultPrimary,
       SkillsSliderSliceVariation,
       SkillsSliderSliceDefault,
+      StatisiticsSlice,
+      StatisiticsSliceVariation,
+      StatisiticsSliceDefault,
     };
   }
 }

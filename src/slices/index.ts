@@ -6,4 +6,5 @@ export const components = {
   about: dynamic(() => import("./About")),
   rich_text: dynamic(() => import("./RichText")),
   skills_slider: dynamic(() => import("./SkillsSlider")),
+  statisitics: dynamic(() => import("./Statisitics")),
 };

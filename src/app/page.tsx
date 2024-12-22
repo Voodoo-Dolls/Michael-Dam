@@ -35,7 +35,6 @@ export default async function Home() {
         <>
             <Hero />
             <SliceZone slices={home.data.slices} components={components} />
-            <Achievements />
         </>
     )
 }
