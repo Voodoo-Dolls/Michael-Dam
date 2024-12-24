@@ -3,48 +3,107 @@
 @tailwind utilities;
 
 /* Typography */
-html{
-    font-size: 1rem;
-    line-height: 1.6;
-    letter-spacing: -0.01em;
-    font-weight: 500;
-    scroll-behavior: smooth;
+html {
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4{
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.03;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03;
 }
 /* Font Size */
-h1{
-    font-size: 2.986rem;
+h1 {
+  font-size: 2.986rem;
 }
 
-h2{
-    font-size: 2.488rem;
+h2 {
+  font-size: 2.488rem;
 }
 
-h3{
-    font-size: 2.074rem;
+h3 {
+  font-size: 2.074rem;
 }
 
-h4{
-    font-size: 1.728rem;
+h4 {
+  font-size: 1.728rem;
 }
 
 /* General */
-body{
-    background-color: rgb(31, 31, 31);
-    color:white;
+body {
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+main {
+  min-height: 100dvh;
+}
+.imgContainer {
+  position: relative;
 }
 
-.imgContainer{
-    position: relative;
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.imgContainer img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Keen Slider */
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: #000;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+}
+
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
 }

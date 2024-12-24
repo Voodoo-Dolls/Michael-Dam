@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="en" className={quickSand.className}>
       <body>
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
       <PrismicPreview repositoryName={repositoryName} />

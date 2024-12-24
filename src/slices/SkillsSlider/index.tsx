@@ -14,8 +14,8 @@ import styles from "./Skills.module.css"
 /**
  * Component for "SkillsSlider" Slices.
  */
+const animation = { duration: 40000, easing: (t: number) => t }
 const SkillsSlider = ({ slice }: any): JSX.Element => {
-  const animation = { duration: 10000, easing: (t: number) => t }
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -45,13 +45,13 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
       rtl: slice.primary.direction,
 
       created(s) {
-        s.moveToIdx(1, true, animation)
+        s.moveToIdx(5, true, animation)
       },
       updated(s) {
-        s.moveToIdx(s.track.details.abs + 1, true, animation)
+        s.moveToIdx(s.track.details.abs + 5, true, animation)
       },
       animationEnded(s) {
-        s.moveToIdx(s.track.details.abs + 1, true, animation)
+        s.moveToIdx(s.track.details.abs + 5, true, animation)
       },
     },
 
@@ -71,7 +71,7 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
         {slice.primary.skills.map((item: any, index: number) => (
           <div className="p-8 keen-slider__slide" key={index}>
             <div className={`imgContainer [&>img]:object-contain ${styles.aspect}`}>
-              <PrismicNextImage field={item.icon} fill fallbackAlt="" />
+              <PrismicNextImage field={item.icon} fill fallbackAlt="" sizes="(max-width: 500px) 110px, (max-width:768) 120px, 190px" />
             </div>
           </div>
 

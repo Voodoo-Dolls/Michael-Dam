@@ -1,0 +1,36 @@
+{
+  "id": "screenshots",
+  "type": "SharedSlice",
+  "name": "Screenshots",
+  "description": "Screenshots",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "screenshots": {
+          "type": "Group",
+          "config": {
+            "label": "Screenshots",
+            "repeat": true,
+            "fields": {
+              "screenshot": {
+                "type": "Image",
+                "config": {
+                  "label": "Screenshot",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -4,7 +4,10 @@ import dynamic from "next/dynamic";
 
 export const components = {
   about: dynamic(() => import("./About")),
+  featured_projects: dynamic(() => import("./FeaturedProjects")),
+  header_with_text: dynamic(() => import("./HeaderWithText")),
   rich_text: dynamic(() => import("./RichText")),
+  screenshots: dynamic(() => import("./Screenshots")),
   skills_slider: dynamic(() => import("./SkillsSlider")),
   statisitics: dynamic(() => import("./Statisitics")),
 };

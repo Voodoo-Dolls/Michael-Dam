@@ -1,7 +1,7 @@
 {
-  "id": "page",
-  "label": "Page",
   "format": "page",
+  "id": "project",
+  "label": "Project",
   "repeatable": true,
   "status": true,
   "json": {
@@ -9,17 +9,31 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "UID",
-          "placeholder": ""
+          "label": "UID"
         }
       },
       "title": {
-        "type": "StructuredText",
+        "type": "Text",
         "config": {
           "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "Thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "heading1"
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "slices": {
@@ -27,19 +41,10 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "featured_projects": {
+            "screenshots": {
               "type": "SharedSlice"
             },
-            "statisitics": {
-              "type": "SharedSlice"
-            },
-            "about": {
-              "type": "SharedSlice"
-            },
-            "skills_slider": {
-              "type": "SharedSlice"
-            },
-            "rich_text": {
+            "header_with_text": {
               "type": "SharedSlice"
             }
           }
@@ -48,29 +53,29 @@
     },
     "SEO & Metadata": {
       "meta_title": {
-        "type": "Text",
         "config": {
           "label": "Meta Title",
           "placeholder": "A title of the page used for social media and search engines"
-        }
+        },
+        "type": "Text"
       },
       "meta_description": {
-        "type": "Text",
         "config": {
           "label": "Meta Description",
           "placeholder": "A brief summary of the page"
-        }
+        },
+        "type": "Text"
       },
       "meta_image": {
-        "type": "Image",
         "config": {
-          "label": "Meta Image",
           "constraint": {
-            "width": 2400,
-            "height": 1260
+            "height": 1260,
+            "width": 2400
           },
+          "label": "Meta Image",
           "thumbnails": []
-        }
+        },
+        "type": "Image"
       }
     }
   }
