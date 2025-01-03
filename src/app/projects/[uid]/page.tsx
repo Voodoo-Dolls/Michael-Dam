@@ -5,7 +5,6 @@ import { PrismicRichText, SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { PrismicNextImage } from "@prismicio/next";
-import { li } from "motion/react-client";
 import Link from "next/link";
 
 type Params = { uid: string };
