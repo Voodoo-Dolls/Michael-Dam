@@ -14,7 +14,8 @@ module.exports = {
         'halfdh': '50dvh'
       },
       colors:{
-        'primary':'#fcd34d'
+        'primary':'#fcd34d',
+        'black':'#121212'
       },
     },
     fontSize: {

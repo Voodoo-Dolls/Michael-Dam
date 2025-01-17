@@ -5,6 +5,7 @@ import "./globals.css"
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
+
 const quickSand = Quicksand({
   subsets: ['latin'],
   display: 'swap',
@@ -24,6 +25,7 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
+      {/* <Corner /> */}
       <PrismicPreview repositoryName={repositoryName} />
     </html>
   );

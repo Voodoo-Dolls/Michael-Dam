@@ -1,12 +1,16 @@
 const routes = [
     {
-        label:"About"
+        label:"About",
+        route:"/#about"
     },
     {
-        label:"Projects"
+        label:"Projects",
+        route:"/#projects"
+
     },
     {
-        label:"Contact"
+        label:"Contact",
+        route:"/#contact"
     }
 ]
 
