@@ -18,7 +18,7 @@ module.exports = {
       },
     },
     fontSize: {
-      'body': '1rem',
+      'body': '1.125rem',
       'hero': 'clamp(2.074rem, (5vw + 16px), 4rem)',
       'button': '1.5rem',
       'h1': '2.986rem',

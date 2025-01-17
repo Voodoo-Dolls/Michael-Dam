@@ -13,10 +13,8 @@ export default function Contact() {
         defaultValues: {
             Name: "",
             Email: "",
-            Phone: "",
             Subject: "",
             Message: "",
-            Image: ""
         }
     })
     // Form Submission
@@ -55,13 +53,20 @@ export default function Contact() {
     // JSX
     return (
         <section className="mb-8">
-            <div className="container grid gap-8 px-4 mx-auto lg:grid-cols-6 xl:px-32">
+            <div className="container grid-cols-2 gap-4 px-4 mx-auto lg:grid">
+                {/* Text */}
+                <div className='mb-4 lg:max-w-md'>
+                    <h2 className="mb-4 text-h2">Let&apos;s Connect</h2>
+                    <p>
+                        I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
+                    </p>
+                </div>
+                {/* Form */}
                 <form onSubmit={handleSubmit((data) => {
                     onSubmit(data)
                 })}
-                    className="p-4 lg:col-span-4"
+
                 >
-                    <h2 className="mb-4 text-h4">Get A Quote</h2>
                     {/* Name */}
                     <label className="w-full mb-4 form-control">
                         <div className="h-4 p-0 label">
@@ -103,29 +108,24 @@ export default function Contact() {
                         />
                         <p>{errors.Email?.message}</p>
                     </label>
-                    {/* Phone Number */}
+
+                    {/* Subject */}
                     <label className="w-full mb-4 form-control">
                         <div className="h-4 p-0 label">
-                            <span className="ml-1 label-text">Phone (Optional)</span>
+                            <span className="ml-1 label-text">Subject</span>
                         </div>
                         <input
-                            {...register("Phone",
-                                {
-                                    pattern: {
-                                        value: /[0-9]{3}-[0-9]{3}-[0-9]{3}/,
-                                        message: "Please enter a phone number in this format 403-307-7629"
-                                    }
-                                }
-                            )}
-                            type="tel"
-                            placeholder="403-307-7629"
+                            {...register("Subject", {
+                                required: "Please enter a subject",
+
+                            })}
+                            type="email"
+                            placeholder="Just saying hi..."
                             className="w-full h-6 rounded input input-bordered"
 
                         />
-                        <p>{errors.Phone?.message}</p>
+                        <p>{errors.Subject?.message}</p>
                     </label>
-
-
                     {/* Message */}
                     <label className="mb-4 form-control">
                         <div className="h-4 p-0 label">
@@ -145,8 +145,7 @@ export default function Contact() {
 
                             })}
                             className="h-24 rounded textarea textarea-bordered"
-                            placeholder="Please provide as much information about your piece as possible. Approx. Measurments, your vision, current condition, etc."
-
+                            placeholder="Let&apos;s talk about..."
                         >
 
                         </textarea>

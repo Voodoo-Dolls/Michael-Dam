@@ -4,7 +4,7 @@
 
 /* Typography */
 html {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -20,25 +20,10 @@ h4 {
   letter-spacing: -0.03;
 }
 /* Font Size */
-h1 {
-  font-size: 2.986rem;
-}
-
-h2 {
-  font-size: 2.488rem;
-}
-
-h3 {
-  font-size: 2.074rem;
-}
-
-h4 {
-  font-size: 1.728rem;
-}
 
 /* General */
 body {
-  background-color: #313639;
+  background-color: #121212;
   color: white;
 }
 main {

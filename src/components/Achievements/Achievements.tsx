@@ -1,23 +1,23 @@
 'use client'
 import dynamic from "next/dynamic";
-const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
-    ssr: false,
-});
+import { Reveal } from "../Framer/Reveal/Reveal";
+import { AnimatedNumber } from "../Framer/AnimatedNumber/AnimatedNumber";
+
 
 const achievementsList = [
     {
         metric: "Projects",
-        value: "10",
+        value: 10,
         postfix: "+",
     },
     {
         metric: "Commits",
-        value: "1000",
+        value: 1000,
         postfix: "+",
     },
     {
         metric: "Years of Experience",
-        value: "2",
+        value: 2,
     },
     {
         metric: "Clients Served",
@@ -30,23 +30,22 @@ export default function Achievements() {
         <div className="container grid gap-6 p-4 mx-auto text-center md:grid-cols-2 lg:grid-cols-4">
             {achievementsList.map((achievement, index) => {
                 return (
-                    <div key={index} className="text-h1">
-                        <div className="flex justify-center">
-                            <AnimatedNumbers
-                                includeComma
-                                animateToNumber={parseInt(achievement.value)}
-                                locale="en-US"
-                                className="text-4xl font-bold text-white"
-                                transitions={(index) => ({
-                                    type: "spring",
-                                    duration: index + 0.3,
-                                })}
-                            />
+                    <Reveal key={index} delay={index}>
 
-                            {achievement.postfix}
+                        <div>
+                            <div className="flex justify-center">
+                                <p className="font-bold text-h1">
+                                    <AnimatedNumber
+                                        value={parseInt(achievement.value)}
+                                        delay={index}
+                                    />
+                                    {achievement.postfix}
+                                </p>
+
+                            </div>
+                            <p className="font-bold text-h3">{achievement.metric} </p>
                         </div>
-                        <h3>{achievement.metric} </h3>
-                    </div>
+                    </Reveal>
                 )
             })}
         </div>
