@@ -33,7 +33,7 @@ const Screenshots = ({ slice }: ScreenshotsProps): JSX.Element => {
       className="container p-4 mx-auto"
       id="Screenshots"
     >
-      <h3 className="mb-4">Screenshots</h3>
+      <h3 className="mb-4 text-h3 text-primary">Screenshots</h3>
       <div className="navigation-wrapper">
         {/* Slider */}
         <div ref={sliderRef} className="keen-slider">

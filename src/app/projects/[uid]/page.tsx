@@ -5,6 +5,8 @@ import { PrismicRichText, SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { PrismicNextImage } from "@prismicio/next";
+import { IoIosList } from "react-icons/io";
+
 import Link from "next/link";
 
 type Params = { uid: string };
@@ -30,12 +32,18 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     {/* Text */}
                     <div className="lg:row-start-1 lg:col-end-8 lg:col-start-1">
                         <div className="mb-6">
-                            <h2 className="mb-6">{data.title}</h2>
+                            <h2 className="mb-6 text-h1">{data.title}</h2>
                             <PrismicRichText field={data.description} />
                         </div>
                         {/* Table of Contents */}
-                        <h2>Table of Contents</h2>
-                        <ul>
+                        <h2 className="flex items-center gap-2 mb-4 text-h3">
+                            <span className="text-primary">
+                                <IoIosList />
+
+                            </span>
+                            Table of Contents
+                        </h2>
+                        <ul className="list-disc list-inside marker:text-primary">
                             {page.data.slices.map((item: any, index) => {
                                 let heading = ""
                                 if (item.slice_type == 'screenshots') {
@@ -44,7 +52,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                                     heading = item.primary.header
                                 }
 
-                                return <li key={index}><Link href={`#${heading.split(" ").join("-")}`}>{heading}</Link></li>
+                                return <li key={index}><Link href={`#${heading.split(" ").join("-")}`} className="underline hover:text-primary">{heading}</Link></li>
                             })}
                         </ul>
                     </div>

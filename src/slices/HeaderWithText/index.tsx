@@ -18,7 +18,7 @@ const HeaderWithText = ({ slice }: HeaderWithTextProps): JSX.Element => {
       className="container p-4 mx-auto"
       id={slice.primary.header?.split(" ").join("-") || ""}
     >
-      <h3>{slice.primary.header}</h3>
+      <h3 className="mb-4 text-h3 text-primary">{slice.primary.header}</h3>
       <PrismicRichText field={slice.primary.text} />
     </section>
   );
