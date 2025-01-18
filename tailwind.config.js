@@ -26,7 +26,12 @@ module.exports = {
       'h2': '2.488rem',
       'h3': '2.074rem',
       'h4': '1.728rem',
+    },
+    gridTemplateRows:{
+      '0': '0fr',
+      '1': '1fr'
     }
+    
   },
   plugins: [
     require('daisyui'),

@@ -18,8 +18,8 @@ export default function Header() {
                     </h1>
                 </Link>
                 {/* Hamburger */}
-                <div className="text-[48px] cursor-pointer p-2 lg:hidden" onClick={() => (setOpen(!open))}>
-                    {open ? <IoMenu /> : <IoClose />}
+                <div className="text-[48px] cursor-pointer p-2 md:hidden" onClick={() => (setOpen(!open))}>
+                    {open ? <IoClose /> : <IoMenu />}
                 </div>
                 {/* Nav */}
                 <Nav open={open} />

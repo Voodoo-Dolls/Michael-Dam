@@ -35,7 +35,7 @@ export default async function Home() {
     return (
         <>
             <Hero />
-            <SliceZone slices={home.data.slices} components={components} />
+            {/* <SliceZone slices={home.data.slices} components={components} /> */}
             <Contact />
         </>
     )
