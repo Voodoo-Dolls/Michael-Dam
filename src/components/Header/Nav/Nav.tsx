@@ -1,6 +1,6 @@
 import Link from "next/link"
 import routes from "./routes"
-export default function Nav({ open }: { open: boolean }) {
+export default function Nav({ open, setOpen }: { open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
 
 
     return (
@@ -11,7 +11,7 @@ export default function Nav({ open }: { open: boolean }) {
                 {routes.map((link, index) => {
                     return (
                         <li key={index}>
-                            <Link href={link.route} className="block p-4 transition-colors hover:bg-black hover:text-primary md:p-1">
+                            <Link href={link.route} className="block p-4 hover:bg-black hover:text-primary md:p-1" onClick={() => (setOpen(false))}>
                                 {link.label}
                             </Link>
                         </li>

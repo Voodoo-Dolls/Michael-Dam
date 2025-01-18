@@ -21,13 +21,13 @@ const FeaturedProjects = ({ slice }: FeaturedProjectsProps): JSX.Element => {
       drag: true,
       loop: true,
       slides: {
-        perView: 2,
+        perView: 1,
         spacing: 24,
       },
       breakpoints: {
         '(min-width: 1024px': {
           slides: {
-            perView: 3,
+            perView: 2,
             spacing: 24
           }
         },
@@ -78,7 +78,7 @@ const FeaturedProjects = ({ slice }: FeaturedProjectsProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className="container p-4 mx-auto">
-        <h2 className="mb-6">Featured Projects</h2>
+        <h2 className="mb-8 text-center text-h2">Featured Projects</h2>
         {/* Slider */}
         <div ref={sliderRef} className="keen-slider">
           {slice.primary.projects.map((item: any) => (

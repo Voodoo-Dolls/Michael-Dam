@@ -22,7 +22,7 @@ export default function Header() {
                     {open ? <IoClose /> : <IoMenu />}
                 </div>
                 {/* Nav */}
-                <Nav open={open} />
+                <Nav open={open} setOpen={setOpen} />
             </div>
         </header>
     )

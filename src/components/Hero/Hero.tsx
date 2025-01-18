@@ -9,7 +9,7 @@ import { MdAlternateEmail } from "react-icons/md";
 export default function Hero() {
     return (
         <>
-            <section className="min-h-halfdh bg-slate-800 hero">
+            <section className="bg-black min-h-halfdh hero">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -59,14 +59,14 @@ export default function Hero() {
                         </h1>
                         {/* CTA */}
                         <div className="flex flex-wrap gap-4">
-                            <button className="text-black rounded-full text-button btn bg-primary border-primary">
+                            <Link href="#contact" className="text-black rounded-full text-button btn bg-primary border-primary hover:text-primary">
                                 <MdAlternateEmail />
                                 Hire Me
-                            </button>
-                            <button className="rounded-full text-button btn border-primary text-primary">
+                            </Link>
+                            <Link href="#" className="rounded-full text-button btn border-primary text-primary hover:text-black hover:bg-primary">
                                 <GrDocumentPdf />
                                 Download CV
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>

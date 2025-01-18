@@ -21,6 +21,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      id="about"
     >
       <div className="container gap-8 px-4 py-8 mx-auto md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16">
 
@@ -30,11 +31,13 @@ const About = ({ slice }: AboutProps): JSX.Element => {
         </div>
         {/* Text */}
         <div className="">
-          <h2 className="text-h2">About Me</h2>
-          <PrismicRichText field={slice.primary.text} />
+          <h2 className="mb-4 text-h2">About Me</h2>
+          {/* Body Text */}
+          <div className="[&>p]:mb-4">
+            <PrismicRichText field={slice.primary.text} />
+          </div>
           {/* Tabs */}
           <div className="flex flex-wrap gap-4">
-
             {slice.primary.tabs.map((item, index) => (
               <TabButton title={item.title} tab={tab} setTab={setTab} key={index}>
                 <PrismicRichText field={item.list} />

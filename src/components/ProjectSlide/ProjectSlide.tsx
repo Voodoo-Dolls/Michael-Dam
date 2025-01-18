@@ -40,13 +40,13 @@ export default function ProjectSlide({ uid }: props) {
     return (
         <>
             {/* Card */}
-            <Link href={project.url}>
+            <Link href={project.url} className="">
                 {/* Image */}
-                <div className={`imgContainer ${styles.aspect}`}>
+                <div className={`imgContainer aspect-[4/3] mb-2`}>
                     <PrismicNextImage field={data.thumbnail} fallbackAlt="" fill className="my-0" />
                 </div>
                 {/* Title */}
-                <h3>{data.title}</h3>
+                <h3 className="text-h4 line-clamp-1">{data.title}</h3>
                 {/* Tags */}
             </Link>
 

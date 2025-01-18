@@ -52,7 +52,7 @@ export default function Contact() {
 
     // JSX
     return (
-        <section className="mb-8">
+        <section className="mb-8" id="contact">
             <div className="container grid-cols-2 gap-4 px-4 mx-auto lg:grid">
                 {/* Text */}
                 <div className='mb-4 lg:max-w-md'>

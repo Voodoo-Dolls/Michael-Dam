@@ -29,27 +29,32 @@ const achievementsList = [
 
 export default function Achievements() {
     return (
-        <div className="container grid gap-6 p-4 mx-auto text-center md:grid-cols-2 lg:grid-cols-4">
-            {achievementsList.map((achievement, index) => {
-                return (
-                    <Reveal key={index} delay={index}>
+        <div className="p-8">
 
-                        <div>
-                            <div className="flex justify-center">
-                                <p className="font-bold text-h1">
-                                    <AnimatedNumber
-                                        value={achievement.value}
-                                        delay={index}
-                                    />
-                                    {achievement.postfix}
-                                </p>
+            <div className="container grid gap-6 p-4 mx-auto text-center md:grid-cols-2 lg:grid-cols-4">
+                {achievementsList.map((achievement, index) => {
+                    return (
+                        <Reveal key={index} delay={index}>
 
+                            <div>
+                                <div className="flex justify-center">
+                                    <p className="font-bold text-h1">
+                                        <span className="text-primary">
+                                            <AnimatedNumber
+                                                value={achievement.value}
+                                                delay={index}
+                                            />
+                                            {achievement.postfix}
+                                        </span>
+                                    </p>
+
+                                </div>
+                                <p className="font-bold text-h3">{achievement.metric} </p>
                             </div>
-                            <p className="font-bold text-h3">{achievement.metric} </p>
-                        </div>
-                    </Reveal>
-                )
-            })}
+                        </Reveal>
+                    )
+                })}
+            </div>
         </div>
     );
 };
