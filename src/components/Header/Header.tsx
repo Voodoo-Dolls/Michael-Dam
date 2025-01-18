@@ -10,11 +10,16 @@ import { useState } from "react"
 export default function Header() {
     const [open, setOpen] = useState(false)
     return (
-        <header className="sticky top-0 z-50 bg-black navbar">
-            <div className="container flex items-center justify-between px-4 mx-auto">
+        <header className="sticky top-0 z-50 bg-black">
+            {/* Container */}
+            <div className="container flex items-center justify-between p-4 mx-auto">
+                {/* Logo */}
                 <Link href={`/`} className="flex items-center gap-4">
-                    <h1>
+                    <h1 className="flex items-center gap-4 text-h2">
                         <Image src={`/images/logo.svg`} alt="Michael Dam's Logo depicting a wolf howling with a moon background." width={80} height={80} title="Welcome to Michael Dam's Portfolio" />
+                        <span>
+                            Michael Dam
+                        </span>
                     </h1>
                 </Link>
                 {/* Hamburger */}
