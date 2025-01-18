@@ -26,14 +26,16 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 {/* Grid */}
                 <div className="grid gap-6 lg:grid-cols-12">
                     {/* Image */}
-                    <div className="lg:col-start-9 lg:col-end-13 imgContainer aspect-video">
-                        <PrismicNextImage field={data.thumbnail} fill fallbackAlt="" />
+                    <div className="lg:col-start-8 lg:col-end-13 imgContainer aspect-video">
+                        <PrismicNextImage field={data.thumbnail} fill fallbackAlt="" className="rounded" />
                     </div>
                     {/* Text */}
                     <div className="lg:row-start-1 lg:col-end-8 lg:col-start-1">
                         <div className="mb-6">
                             <h2 className="mb-6 text-h1">{data.title}</h2>
-                            <PrismicRichText field={data.description} />
+                            <div className="[&>p]:mb-4 [&>p>a]:text-primary [&>p>a]:underline">
+                                <PrismicRichText field={data.description} />
+                            </div>
                         </div>
                         {/* Table of Contents */}
                         <h2 className="flex items-center gap-2 mb-4 text-h3">

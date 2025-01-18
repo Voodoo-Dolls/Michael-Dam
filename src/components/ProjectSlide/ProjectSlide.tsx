@@ -42,7 +42,7 @@ export default function ProjectSlide({ uid }: props) {
             {/* Card */}
             <Link href={project.url} className="">
                 {/* Image */}
-                <div className={`imgContainer aspect-[4/3] mb-2`}>
+                <div className={`imgContainer aspect-video mb-2`}>
                     <PrismicNextImage field={data.thumbnail} fallbackAlt="" fill className="my-0" />
                 </div>
                 {/* Title */}
