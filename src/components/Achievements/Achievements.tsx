@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { Reveal } from "../Framer/Reveal/Reveal";
 import { AnimatedNumber } from "../Framer/AnimatedNumber/AnimatedNumber";
+import { Interface } from "readline";
 
 
 const achievementsList = [
@@ -21,9 +22,10 @@ const achievementsList = [
     },
     {
         metric: "Clients Served",
-        value: "7"
+        value: 7
     }
 ];
+
 
 export default function Achievements() {
     return (
@@ -36,7 +38,7 @@ export default function Achievements() {
                             <div className="flex justify-center">
                                 <p className="font-bold text-h1">
                                     <AnimatedNumber
-                                        value={parseInt(achievement.value)}
+                                        value={achievement.value}
                                         delay={index}
                                     />
                                     {achievement.postfix}
