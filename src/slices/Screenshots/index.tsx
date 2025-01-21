@@ -5,6 +5,8 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import React, { useState } from "react"
 import { PrismicNextImage } from "@prismicio/next";
+import { FaRegImage } from "react-icons/fa6";
+
 /**
  * Props for `Screenshots`.
  */
@@ -18,7 +20,6 @@ const Screenshots = ({ slice }: ScreenshotsProps): JSX.Element => {
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
-    loop: true,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
@@ -30,17 +31,20 @@ const Screenshots = ({ slice }: ScreenshotsProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="container p-4 mx-auto"
+      className="w-full p-4"
       id="Screenshots"
     >
-      <h3 className="mb-4 text-h3 text-primary">Screenshots</h3>
+      <h3 className="flex items-center gap-2 mb-4 text-h3 text-primary">
+        <FaRegImage />
+
+        Screenshots</h3>
       <div className="navigation-wrapper">
         {/* Slider */}
         <div ref={sliderRef} className="keen-slider">
           {slice.primary.screenshots.map((item, index) => (
             <div className="keen-slider__slide" key={index}>
               <div className="imgContainer aspect-video">
-                <PrismicNextImage field={item.screenshot} />
+                <PrismicNextImage field={item.screenshot} fallbackAlt="" />
               </div>
             </div>
           ))}
