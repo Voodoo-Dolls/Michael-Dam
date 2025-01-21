@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             {/* Left */}
             <Contents data={page.data.slices} />
             {/* Right */}
-            <div className="relative grid flex-grow w-full grid-cols-1 gap-4 p-4 overflow-hidden rounded bg-tone">
+            <div className="relative grid flex-grow w-full grid-cols-1 gap-4 p-4 overflow-hidden rounded bg-black2">
                 {/* Grid */}
                 <div className="w-full gap-6 mb-4 xl:grid xl:grid-cols-12 ">
                     {/* Image */}

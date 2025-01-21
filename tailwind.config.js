@@ -19,10 +19,11 @@ module.exports = {
         'primary3':"#ffdc78",
         'primary4':"#ffdc78",
         'black':'#121212',
-        'black1': "#282828",
-        'black2': "#3f3f3f",
+        'black2': "#282828",
+        'black3': "#3f3f3f",
         'white': "#f1f1f1",
-        "tone":"#262219"
+        "tone":"#262219",
+        "tone2":"#3b372e",
 
       },
     },
