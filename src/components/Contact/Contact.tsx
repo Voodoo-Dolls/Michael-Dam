@@ -52,8 +52,8 @@ export default function Contact() {
 
     // JSX
     return (
-        <section className="mb-8" id="contact">
-            <div className="container grid-cols-2 gap-4 px-4 mx-auto lg:grid">
+        <section className="p-4 mb-8 bg-opacity-75 bg-tone2" id="contact">
+            <div className="container grid-cols-2 gap-4 mx-auto lg:grid">
                 {/* Text */}
                 <div className='mb-4 lg:max-w-md'>
                     <h2 className="mb-4 text-h2">Let&apos;s Connect</h2>
