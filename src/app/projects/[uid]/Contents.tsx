@@ -12,9 +12,16 @@ export default function Contents({ data }: any) {
     // console.log(entry)
     return (
         <>
-            <div className="fixed bottom-0 left-0 z-10 mb-4 ml-4 lg:static">
-                <div className={`grid ${open ? "block" : "hidden"} `}>
-                    <ul className="p-4 list-disc list-inside bg-red-900 marker:text-primary">
+            <div className="fixed bottom-4 left-4 z-10 rounded lg:sticky lg:top-[112px] min-w-fit h-fit bg-black2 py-4">
+
+                <h2 className='flex items-center justify-start gap-2 px-4 text-h4 text-primary' onClick={() => (setOpen(!open))}>
+                    <IoIosList />
+                    Contents
+                    {/* Contents */}
+                </h2>
+
+                <div className={`grid transition-all ${open ? "grid-rows-1 mt-2" : "grid-rows-0"} lg:grid-rows-1 ml-4 lg:mt-2`}>
+                    <ul className={`list-disc list-inside marker:text-primary w-fit overflow-hidden`}>
                         {data.map((item: any, index: number) => {
                             let heading = ""
                             if (item.slice_type == 'screenshots') {
@@ -22,17 +29,11 @@ export default function Contents({ data }: any) {
                             } else {
                                 heading = item.primary.header
                             }
-
-                            return <li key={index}><Link href={`#${heading.split(" ").join("-")}`} className="underline hover:text-primary" onClick={() => (setOpen(false))}>{heading}</Link></li>
+                            return <li key={index} className='whitespace-nowrap'><Link href={`#${heading.split(" ").join("-")}`} className="underline hover:text-primary w-fit" onClick={() => (setOpen(false))}>{heading}</Link></li>
                         })}
                     </ul>
                 </div>
-                <h2 className="flex items-center gap-2 bg-black border cursor-pointer text-h4 w-fit" onClick={() => (setOpen(!open))}>
-                    <span className="text-primary">
-                        <IoIosList />
-                    </span>
-                    {/* Contents */}
-                </h2>
+
             </div>
         </>
     )

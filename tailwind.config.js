@@ -15,7 +15,12 @@ module.exports = {
       },
       colors:{
         'primary':'#fcd34d',
-        'black':'#121212'
+        'primary2':"#fed863",
+        'primary3':"#ffdc78",
+        'primary4':"#ffdc78",
+        'black':'#121212',
+        'black1': "#282828",
+        'black2': "#3f3f3f"
       },
     },
     fontSize: {

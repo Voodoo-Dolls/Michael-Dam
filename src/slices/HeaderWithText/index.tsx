@@ -15,7 +15,6 @@ const HeaderWithText = ({ slice }: HeaderWithTextProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="p-4"
       id={slice.primary.header?.split(" ").join("-") || ""}
     >
       <h3 className="mb-4 text-h3 text-primary">{slice.primary.header}</h3>

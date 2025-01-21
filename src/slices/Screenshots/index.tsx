@@ -31,7 +31,6 @@ const Screenshots = ({ slice }: ScreenshotsProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full p-4"
       id="Screenshots"
     >
       <h3 className="flex items-center gap-2 mb-4 text-h3 text-primary">
