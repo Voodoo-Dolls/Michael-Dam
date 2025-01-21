@@ -42,6 +42,9 @@ main {
   object-fit: cover;
 }
 
+/* .container{
+  @apply border;
+} */
 /* Keen Slider */
 .navigation-wrapper {
   position: relative;

@@ -23,10 +23,10 @@ export default function RootLayout({
       <body>
         <Header />
         <main>
-          <Particles id={"tsparticles"} />
           {children}
         </main>
         <Footer />
+        <Particles id={"tsparticles"} />
       </body>
 
       {/* <Corner /> */}

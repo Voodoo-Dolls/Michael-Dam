@@ -22,16 +22,15 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       id="about"
-      className="bg-opacity-50 bg-tone2"
     >
-      <div className="container gap-8 px-4 py-8 mx-auto md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="container gap-8 py-8 mx-auto md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16">
 
         {/* Image */}
         <div className="relative object-contain mb-4 aspect-video">
           <PrismicNextImage field={slice.primary.image} fallbackAlt="" fill className="object-contain" />
         </div>
         {/* Text */}
-        <div className="">
+        <div className="p-6 bg-opacity-50 rounded bg-black2">
           <h2 className="mb-4 text-h2">About Me</h2>
           {/* Body Text */}
           <div className="[&>p]:mb-4">

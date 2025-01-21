@@ -10,7 +10,7 @@ import { useState } from "react"
 export default function Header() {
     const [open, setOpen] = useState(false)
     return (
-        <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md">
+        <header className="sticky top-0 z-50 backdrop-blur-md">
             {/* Container */}
             <div className="container flex items-center justify-between p-4 mx-auto">
                 {/* Logo */}
