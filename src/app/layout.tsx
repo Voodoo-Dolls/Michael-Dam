@@ -5,6 +5,9 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { inter } from "./fonts";
 import { poppins } from "./fonts";
+import Particles from "@/components/Particles/Particles";
+
+
 
 
 
@@ -20,10 +23,12 @@ export default function RootLayout({
       <body>
         <Header />
         <main>
+          <Particles id={"tsparticles"} />
           {children}
         </main>
         <Footer />
       </body>
+
       {/* <Corner /> */}
       <PrismicPreview repositoryName={repositoryName} />
     </html>

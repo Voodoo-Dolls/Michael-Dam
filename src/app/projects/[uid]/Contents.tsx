@@ -12,7 +12,7 @@ export default function Contents({ data }: any) {
     // console.log(entry)
     return (
         <>
-            <div className="fixed bottom-4 left-4 z-10 rounded lg:sticky lg:top-[128px]  h-fit bg-black2 border-primary border">
+            <div className="fixed bottom-4 left-4 z-10 rounded lg:sticky lg:top-[128px]  h-fit  border-primary border">
 
                 <div className='flex items-center justify-start gap-2 p-4 text-h4' onClick={() => (setOpen(!open))}>
                     <IoIosList />

@@ -22,6 +22,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       id="about"
+      className="bg-opacity-50 bg-tone2"
     >
       <div className="container gap-8 px-4 py-8 mx-auto md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16">
 
@@ -37,7 +38,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
             <PrismicRichText field={slice.primary.text} />
           </div>
           {/* Tabs */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-x-8 gap-y-4">
             {slice.primary.tabs.map((item, index) => (
               <TabButton title={item.title} tab={tab} setTab={setTab} key={index}>
                 <PrismicRichText field={item.list} />
