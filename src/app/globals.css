@@ -25,9 +25,9 @@ h4 {
 /* General */
 body {
   background-color: #121212;
-  color: white;
+  
 
-  @apply text-body;
+  @apply text-white text-body;
 }
 main {
   min-height: 100dvh;

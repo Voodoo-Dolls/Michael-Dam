@@ -26,9 +26,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             {/* Left */}
             <Contents data={page.data.slices} />
             {/* Right */}
-            <div className="relative flex-grow w-full overflow-hidden">
+            <div className="relative grid flex-grow w-full grid-cols-1 gap-4 p-4 overflow-hidden rounded bg-tone">
                 {/* Grid */}
-                <div className="w-full gap-6 xl:grid xl:grid-cols-12">
+                <div className="w-full gap-6 mb-4 xl:grid xl:grid-cols-12 ">
                     {/* Image */}
                     <div className="mb-4 xl:col-start-8 xl:col-end-13 imgContainer aspect-video">
                         <PrismicNextImage field={data.thumbnail} fill fallbackAlt="" className="rounded" />
@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     {/* Text */}
                     <div className="xl:row-start-1 xl:col-end-8 xl:col-start-1">
                         <div className="mb-6">
-                            <h2 className="mb-6 text-h1">{data.title}</h2>
+                            <h2 className="mb-6 text-h2 text-primary">{data.title}</h2>
                             <div className="[&>p]:mb-4 [&>p>a]:text-primary [&>p>a]:underline">
                                 <PrismicRichText field={data.description} />
                             </div>

@@ -20,7 +20,10 @@ module.exports = {
         'primary4':"#ffdc78",
         'black':'#121212',
         'black1': "#282828",
-        'black2': "#3f3f3f"
+        'black2': "#3f3f3f",
+        'white': "#f1f1f1",
+        "tone":"#262219"
+
       },
     },
     fontSize: {
