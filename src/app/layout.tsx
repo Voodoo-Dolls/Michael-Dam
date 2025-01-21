@@ -1,16 +1,14 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
-import { Quicksand } from 'next/font/google'
 import "./globals.css"
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { inter } from "./fonts";
+import { poppins } from "./fonts";
 
 
 
-const quickSand = Quicksand({
-  subsets: ['latin'],
-  display: 'swap',
-})
+
 
 export default function RootLayout({
   children,
@@ -18,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={quickSand.className}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body>
         <Header />
         <main>
