@@ -60,7 +60,6 @@ export default function Contact() {
                     <h2 className="flex items-center gap-2 mb-4 text-h2">
                         <span className='text-primary'>
                             <MdOutlineEmail />
-
                         </span>
 
                         Let&apos;s Connect
@@ -76,7 +75,7 @@ export default function Contact() {
 
                 >
                     {/* Name */}
-                    <label className="w-full mb-4 form-control">
+                    <label className="w-full mb-4 form-control" >
                         <div className="h-4 p-0 label">
                             <span className="mb-2 ml-1 label-text">Name</span>
                         </div>
@@ -90,13 +89,17 @@ export default function Contact() {
                             type="text"
                             placeholder="Jane Doe"
                             className="w-full p-2 bg-transparent border rounded focus:border-primary"
+                            name='name'
+                            autoComplete='on'
                         />
                         {errors.Name?.message && (
                             <p role="alert">{errors.Name.message}</p>
                         )}
                     </label>
                     {/* Email */}
-                    <label className="w-full mb-4 form-control">
+                    <label className="w-full mb-4 form-control"
+
+                    >
                         <div className="h-4 p-0 label">
                             <span className="ml-1 label-text">Email</span>
                         </div>
@@ -112,13 +115,16 @@ export default function Contact() {
                             type="email"
                             placeholder="janedoe@email.com"
                             className="w-full rounded input input-bordered"
-
+                            name='email'
+                            autoComplete='on'
                         />
                         <p>{errors.Email?.message}</p>
                     </label>
 
                     {/* Subject */}
-                    <label className="w-full mb-4 form-control">
+                    <label className="w-full mb-4 form-control"
+
+                    >
                         <div className="h-4 p-0 label">
                             <span className="ml-1 label-text">Subject</span>
                         </div>
@@ -130,12 +136,14 @@ export default function Contact() {
                             type="email"
                             placeholder="Just saying hi..."
                             className="w-full rounded input input-bordered "
-
+                            name='subject'
                         />
                         <p>{errors.Subject?.message}</p>
                     </label>
                     {/* Message */}
-                    <label className="mb-4 form-control">
+                    <label className="mb-4 form-control"
+
+                    >
                         <div className="h-4 p-0 label">
                             <span className="ml-1 label-text">Message</span>
                         </div>
@@ -154,8 +162,8 @@ export default function Contact() {
                             })}
                             className="h-24 rounded textarea textarea-bordered"
                             placeholder="Let&apos;s talk about..."
+                            name='message'
                         >
-
                         </textarea>
                         <p>{errors.Message?.message}</p>
                     </label>

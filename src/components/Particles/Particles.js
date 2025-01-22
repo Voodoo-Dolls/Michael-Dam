@@ -26,7 +26,10 @@ const ParticlesComponent = (props) => {
                     enable: true, // enabling this will make particles linked together
                     distance: 120, // maximum distance for linking the particles
                     color:"#fcd34d",
-         
+                    triangles: {
+                        enable: true,
+                        opacity: 0.1,
+                    }
                 },
                 move: {
                     enable: true, // enabling this will make particles move in the canvas

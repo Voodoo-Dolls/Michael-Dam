@@ -14,7 +14,7 @@ export default function Contents({ data }: any) {
         <>
             <div className="fixed bottom-4 left-4 z-10 lg:rounded lg:sticky lg:top-[128px] min-w-fit h-fit overflow-clip">
 
-                <div className='flex items-center justify-start gap-2 p-4 bg-black2 text-h4 w-fit ' onClick={() => (setOpen(!open))}>
+                <div className='flex items-center justify-start gap-2 p-4 bg-black2 text-h4 w-fit bg-opacity-70 lg:pb-0' onClick={() => (setOpen(!open))}>
                     <span className='text-primary'>
 
                         <IoIosList />
@@ -25,7 +25,7 @@ export default function Contents({ data }: any) {
 
                 </div>
 
-                <div className={` grid transition-all bg-black2 ${open ? "grid-rows-1 p-4 " : "grid-rows-0"} lg:grid-rows-1  lg:p-4  `}>
+                <div className={` grid transition-all bg-black2 bg-opacity-70 ${open ? "grid-rows-1 p-4 " : "grid-rows-0"} lg:grid-rows-1  lg:p-4  `}>
                     <ul className={`list-disc list-inside marker:text-primary w-fit overflow-hidden `}>
                         {data.map((item: any, index: number) => {
                             let heading = ""

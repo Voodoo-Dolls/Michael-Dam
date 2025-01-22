@@ -1,9 +1,8 @@
 'use client'
-import dynamic from "next/dynamic";
 import { Reveal } from "../Framer/Reveal/Reveal";
 import { AnimatedNumber } from "../Framer/AnimatedNumber/AnimatedNumber";
-import { Interface } from "readline";
-import styles from "./Achievements.module.css"
+
+
 
 const achievementsList = [
     {
@@ -30,7 +29,7 @@ const achievementsList = [
 export default function Achievements() {
     return (
         <div className={`p-8 mb-4 bg-opacity-50 bg-black2 relative`}>
-            <div className={`w-full h-full absolute top-0 left-0 ${styles.banner}`}></div>
+            <div className={`w-full h-full absolute top-0 left-0 pattern`}></div>
             <div className="container grid gap-6 p-4 mx-auto text-center md:grid-cols-2 lg:grid-cols-4">
                 {achievementsList.map((achievement, index) => {
                     return (

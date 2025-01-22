@@ -34,7 +34,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
         </div>
         {/* Text */}
         <div className="relative p-6 bg-opacity-50 rounded bg-black2">
-          <div className="absolute top-0 left-0 w-full h-full banner -z-1"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-cover pattern -z-1"></div>
           <h2 className="flex items-center gap-2 mb-4 text-white text-h2">
             <span className="text-primary">
               <CgProfile />

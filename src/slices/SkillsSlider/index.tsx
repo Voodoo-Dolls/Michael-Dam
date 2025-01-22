@@ -38,7 +38,7 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
         },
         "(min-width: 1024px)": {
           slides: {
-            perView: 8,
+            perView: 7,
           },
         },
       },
@@ -70,7 +70,7 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
         {slice.primary.skills.map((item: any, index: number) => (
           <div className="p-8 keen-slider__slide" key={index}>
             <div className={`imgContainer [&>img]:object-contain ${styles.aspect}`}>
-              <PrismicNextImage field={item.icon} fill fallbackAlt="" sizes="(max-width: 500px) 110px, (max-width:768) 120px, 190px" />
+              <PrismicNextImage field={item.icon} fill fallbackAlt="" sizes="(max-width: 500px) 110px, (max-width:768) 120px, 120px" />
             </div>
           </div>
 
