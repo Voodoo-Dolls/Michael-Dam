@@ -38,7 +38,7 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
         },
         "(min-width: 1024px)": {
           slides: {
-            perView: 6,
+            perView: 8,
           },
         },
       },
@@ -63,7 +63,6 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={`container p-4 mx-auto`}
     >
       {/* Slider */}
       {/* {slice.primary.direction && <h2>Skills</h2>} */}

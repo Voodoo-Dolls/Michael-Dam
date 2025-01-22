@@ -4,7 +4,6 @@ import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Spinner from "../Spinner/Spinner";
-import styles from "./ProjectSlide.module.css"
 interface props {
     uid: string
 }
@@ -17,6 +16,7 @@ interface project {
 
         }
     }
+    tags: [string]
 }
 export default function ProjectSlide({ uid }: props) {
     const [project, setProject] = useState<project | null>(null)
@@ -30,13 +30,13 @@ export default function ProjectSlide({ uid }: props) {
     }, [uid])
     if (!project) {
         return (
-            <div className={`${styles.aspect} w-full flex items-center justify-center`}>
+            <div className={`aspect-video w-full flex items-center justify-center`}>
                 <Spinner />
             </div>
         )
     }
     const { data } = project
-
+    // console.log(project)
     return (
         <>
             {/* Card */}
@@ -50,7 +50,9 @@ export default function ProjectSlide({ uid }: props) {
                 {/* Title */}
                 <h3 className="text-h4 group-hover:underline line-clamp-1">{data.title}</h3>
                 {/* Tags */}
-
+                <div>
+                    <p className="text-xs text-[#ADB7BE] line-clamp-1">{project.tags.join(", ")}</p>
+                </div>
             </Link>
 
         </>
