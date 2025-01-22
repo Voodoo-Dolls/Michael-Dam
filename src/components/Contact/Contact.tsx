@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { useForm } from "react-hook-form"
 import { IoIosSend } from "react-icons/io";
+import { MdOutlineEmail } from "react-icons/md";
 
 
 
@@ -56,7 +57,14 @@ export default function Contact() {
             <div className="container grid-cols-2 gap-4 mx-auto lg:grid">
                 {/* Text */}
                 <div className='mb-4 lg:max-w-md'>
-                    <h2 className="mb-4 text-h2">Let&apos;s Connect</h2>
+                    <h2 className="flex items-center gap-2 mb-4 text-h2">
+                        <span className='text-primary'>
+                            <MdOutlineEmail />
+
+                        </span>
+
+                        Let&apos;s Connect
+                    </h2>
                     <p>
                         I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
                     </p>

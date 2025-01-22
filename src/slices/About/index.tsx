@@ -34,20 +34,19 @@ const About = ({ slice }: AboutProps): JSX.Element => {
         </div>
         {/* Text */}
         <div className="relative p-6 bg-opacity-50 rounded bg-black2">
-          <div className="absolute top-0 left-0 w-full h-full banner"></div>
-          <h2 className="flex items-center gap-2 mb-4 text-h2 ">
+          <div className="absolute top-0 left-0 w-full h-full banner -z-1"></div>
+          <h2 className="flex items-center gap-2 mb-4 text-white text-h2">
             <span className="text-primary">
               <CgProfile />
-
             </span>
             About Me
           </h2>
           {/* Body Text */}
-          <div className="[&>p]:mb-4">
+          <div className="[&>p]:mb-4 relative z-1">
             <PrismicRichText field={slice.primary.text} />
           </div>
           {/* Tabs */}
-          <div className="flex flex-wrap gap-x-8 gap-y-4">
+          <div className="relative flex flex-wrap z-1 gap-x-8 gap-y-4">
             {slice.primary.tabs.map((item, index) => (
               <TabButton title={item.title} tab={tab} setTab={setTab} key={index}>
                 <PrismicRichText field={item.list} />
