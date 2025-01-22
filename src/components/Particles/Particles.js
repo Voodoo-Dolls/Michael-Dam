@@ -20,11 +20,11 @@ const ParticlesComponent = (props) => {
             },
             particles: {
                 number:{
-                    value: 100
+                    value: 70
                 },
                 links: {
                     enable: true, // enabling this will make particles linked together
-                    distance: 80, // maximum distance for linking the particles
+                    distance: 120, // maximum distance for linking the particles
                     color:"#fcd34d",
          
                 },

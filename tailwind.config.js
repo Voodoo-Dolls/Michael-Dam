@@ -27,6 +27,9 @@ module.exports = {
 
       },
     },
+    fontFamily: {
+      "inter":"var(--font-inter)",
+    },
     fontSize: {
       'body': '1.125rem',
       'hero': 'clamp(2.074rem, (5vw + 16px), 4rem)',

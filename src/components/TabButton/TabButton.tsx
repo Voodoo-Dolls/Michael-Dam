@@ -8,7 +8,7 @@ const TabButton = ({ title, children, tab, setTab }: any) => {
         <>
             <button
                 onClick={() => setTab(title)}
-                className={`order-1 transition-all ${styles.button} ${tab == title ? `text-primary ${styles.border} ` : "text-[#ADB7BE]"} text-h4`}>
+                className={`order-1 transition-all ${styles.button} ${tab == title ? `text-primary ${styles.border} ` : "text-[#ADB7BE]"} text-h4 font-inter font-bold`}>
                 {title}
             </button>
 

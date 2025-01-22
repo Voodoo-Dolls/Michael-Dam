@@ -29,7 +29,7 @@ const achievementsList = [
 
 export default function Achievements() {
     return (
-        <div className="p-8">
+        <div className="p-8 mb-4 bg-opacity-50 bg-black2">
 
             <div className="container grid gap-6 p-4 mx-auto text-center md:grid-cols-2 lg:grid-cols-4">
                 {achievementsList.map((achievement, index) => {

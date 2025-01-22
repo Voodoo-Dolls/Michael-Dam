@@ -40,14 +40,17 @@ export default function ProjectSlide({ uid }: props) {
     return (
         <>
             {/* Card */}
-            <Link href={project.url} className="">
+            <Link href={project.url} className="group">
                 {/* Image */}
-                <div className={`imgContainer aspect-video mb-2`}>
+                <div className={`imgContainer aspect-video mb-2 rounded border-transparent`}>
+                    {/* Overlay */}
+                    <div className="absolute z-10 w-full h-full transition-all bg-opacity-50 opacity-0 bg-primary group-hover:opacity-50"></div>
                     <PrismicNextImage field={data.thumbnail} fallbackAlt="" fill className="my-0" />
                 </div>
                 {/* Title */}
-                <h3 className="text-h4 line-clamp-1">{data.title}</h3>
+                <h3 className="text-h4 group-hover:underline line-clamp-1">{data.title}</h3>
                 {/* Tags */}
+
             </Link>
 
         </>
