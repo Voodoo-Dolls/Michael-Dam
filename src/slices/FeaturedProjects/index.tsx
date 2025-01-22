@@ -78,7 +78,7 @@ const FeaturedProjects = ({ slice }: FeaturedProjectsProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className="container p-4 mx-auto">
-        <h2 className="mb-8 text-center text-h2">&#9679; Featured Projects &#9679;</h2>
+        <h2 className="mb-8 text-center text-h2">Featured Projects </h2>
         {/* Slider */}
         <div ref={sliderRef} className="keen-slider">
           {slice.primary.projects.map((item: any) => (
