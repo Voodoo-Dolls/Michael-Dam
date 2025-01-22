@@ -1,7 +1,6 @@
 'use client'
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
-//import { loadFull } from "tsparticles"; // loads tsparticles
 import { useCallback, useMemo } from "react";
 
 // tsParticles Repository: https://github.com/matteobruni/tsparticles
@@ -26,10 +25,7 @@ const ParticlesComponent = (props) => {
                     enable: true, // enabling this will make particles linked together
                     distance: 120, // maximum distance for linking the particles
                     color:"#fcd34d",
-                    triangles: {
-                        enable: true,
-                        opacity: 0.1,
-                    }
+
                 },
                 move: {
                     enable: true, // enabling this will make particles move in the canvas

@@ -11,7 +11,7 @@ export default function Nav({ open, setOpen }: { open: boolean, setOpen: React.D
                 {routes.map((link, index) => {
                     return (
                         <li key={index}>
-                            <Link href={link.route} className="block p-4 hover:bg-black hover:text-primary md:p-1" onClick={() => (setOpen(false))}>
+                            <Link href={link.route} className="block p-4 hover:bg-black hover:text-primary md:p-1 md:hover:bg-transparent" onClick={() => (setOpen(false))}>
                                 {link.label}
                             </Link>
                         </li>
