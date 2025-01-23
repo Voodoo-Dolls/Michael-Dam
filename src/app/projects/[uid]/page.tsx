@@ -22,11 +22,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     const { data } = page
     // console.log(data)
     return (
-        <div className="container relative p-4 mx-auto lg:flex lg:gap-6">
+        <div className="container relative mx-auto lg:flex lg:gap-6" id="top">
             {/* Left */}
             <Contents data={page.data.slices} />
             {/* Right */}
-            <div className="relative grid flex-grow w-full grid-cols-1 gap-4 p-6 overflow-hidden rounded bg-opacity-70 bg-black2">
+            <div className="relative grid flex-grow w-full grid-cols-1 gap-4 p-6 overflow-hidden bg-opacity-50 rounded bg-black2 backdrop-blur-sm md:backdrop-blur-none">
                 {/* Grid */}
                 <div className="w-full gap-6 mb-4 xl:grid xl:grid-cols-12 ">
                     {/* Image */}

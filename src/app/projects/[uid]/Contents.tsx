@@ -12,7 +12,7 @@ export default function Contents({ data }: any) {
     // console.log(entry)
     return (
         <>
-            <div className="fixed bottom-4 left-4 z-10 lg:rounded lg:sticky lg:top-[128px] min-w-fit h-fit overflow-clip">
+            <div className="fixed bottom-4 left-4 z-10 lg:rounded lg:sticky lg:top-[112px] min-w-fit h-fit overflow-clip">
 
                 <div className='flex items-center justify-start gap-2 p-4 bg-black2 text-h4 w-fit bg-opacity-70 lg:pb-0' onClick={() => (setOpen(!open))}>
                     <span className='text-primary'>
@@ -27,6 +27,7 @@ export default function Contents({ data }: any) {
 
                 <div className={` grid transition-all bg-black2 bg-opacity-70 ${open ? "grid-rows-1 p-4 " : "grid-rows-0"} lg:grid-rows-1  lg:p-4  `}>
                     <ul className={`list-disc list-inside marker:text-primary w-fit overflow-hidden `}>
+                        <li><Link href={"#top"} className='underline hover:text-primary w-fit' onClick={() => (setOpen(false))}>Back to Top</Link></li>
                         {data.map((item: any, index: number) => {
                             let heading = ""
                             if (item.slice_type == 'screenshots') {
@@ -34,7 +35,7 @@ export default function Contents({ data }: any) {
                             } else {
                                 heading = item.primary.header
                             }
-                            return <li key={index} className='whitespace-nowrap'><Link href={`#${heading.split(" ").join("-")}`} className="underline hover:text-primary w-fit" onClick={() => (setOpen(false))}>{heading}</Link></li>
+                            return <li key={index}><Link href={`#${heading.split(" ").join("-")}`} className="underline hover:text-primary w-fit" onClick={() => (setOpen(false))}>{heading}</Link></li>
                         })}
                     </ul>
                 </div>

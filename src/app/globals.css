@@ -53,7 +53,7 @@ main {
 .circle{
   position: relative;
   z-index: 1;
-  @apply border rounded-full;
+  @apply rounded-full;
 }
 
 @property --angle{
@@ -72,7 +72,7 @@ main {
   translate: -50% -50%;
   z-index:-1;
   border-radius: 100%;
-  background-image: conic-gradient(from var(--angle),transparent 5%, #fcd34d);
+  background-image: conic-gradient(from var(--angle),transparent 2%, #fcd34d);
   animation: 5s spin infinite linear;
 }
 

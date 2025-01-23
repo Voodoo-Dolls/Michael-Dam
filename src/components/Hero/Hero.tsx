@@ -16,12 +16,13 @@ export default function Hero() {
                     transition={{ duration: 0.5 }}
                     className="container flex flex-col p-4 lg:flex-row-reverse lg:items-center lg:justify-between">
                     {/* Image */}
-                    <div className="w-full max-w-sm mx-auto mb-4 xl:max-w-xl lg:p-8 lg:mx-0 imgContainer aspect-square circle">
+                    <div className="w-full max-w-sm mx-auto mb-4 xl:max-w-[30rem] lg:p-8 lg:mx-0 imgContainer aspect-square circle bg-black">
                         <Image
                             src="/images/me.jpg"
                             className="rounded-full shadow-2xl"
                             fill
                             alt=""
+
                         />
                     </div>
                     <div>
