@@ -18,6 +18,11 @@
 						}
 					}
 				]
+			},
+			"icon": {
+				"__TYPE__": "FieldContent",
+				"value": "Scope",
+				"type": "Select"
 			}
 		},
 		"items": []

@@ -27,6 +27,22 @@
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
+        },
+        "icon": {
+          "type": "Select",
+          "config": {
+            "label": "Icon",
+            "placeholder": "",
+            "options": [
+              "Empty",
+              "Scope",
+              "Cap",
+              "Brush",
+              "Bubble",
+              "Sparkle"
+            ],
+            "default_value": "Empty"
+          }
         }
       },
       "items": {}

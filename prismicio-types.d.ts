@@ -353,6 +353,20 @@ export interface HeaderWithTextSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
+
+  /**
+   * Icon field in *HeaderWithText → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Empty
+   * - **API ID Path**: header_with_text.default.primary.icon
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  icon: prismic.SelectField<
+    "Empty" | "Scope" | "Cap" | "Brush" | "Bubble" | "Sparkle",
+    "filled"
+  >;
 }
 
 /**

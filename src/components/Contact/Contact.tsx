@@ -5,8 +5,6 @@ import { useForm } from "react-hook-form"
 import { IoIosSend } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
 
-
-
 export default function Contact() {
     const [sending, setSending] = useState(false)
     // React Form

@@ -33,8 +33,10 @@ const Screenshots = ({ slice }: ScreenshotsProps): JSX.Element => {
       data-slice-variation={slice.variation}
       id="Screenshots"
     >
-      <h3 className="flex items-center gap-2 mb-4 text-h3 text-primary">
-        <FaRegImage />
+      <h3 className="flex items-center gap-2 mb-4 text-h3">
+        <span className="text-primary">
+          <FaRegImage />
+        </span>
 
         Screenshots</h3>
       <div className="navigation-wrapper">
