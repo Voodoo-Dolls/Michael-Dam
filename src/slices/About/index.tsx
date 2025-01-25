@@ -33,7 +33,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
           <PrismicNextImage field={slice.primary.image} fallbackAlt="" fill className="object-contain" />
         </div>
         {/* Text */}
-        <div className="relative p-6 rounded md:bg-opacity-50 bg-black2">
+        <div className="relative p-6 bg-opacity-50 rounded bg-black2 backdrop-blur-sm">
           <div className="absolute top-0 left-0 w-full h-full bg-cover pattern -z-1"></div>
           <h2 className="flex items-center gap-2 mb-4 text-white text-h2">
             <span className="text-primary">

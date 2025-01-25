@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import { inter } from "./fonts";
 import { poppins } from "./fonts";
 import Particles from "@/components/Particles/Particles";
+import { Toaster } from "sonner";
 
 
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster position="top-center" />
         <Particles id={"tsparticles"} />
       </body>
 

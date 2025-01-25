@@ -17,7 +17,7 @@ export default function Header() {
                 <Link href={`/`} className="flex items-center gap-4">
                     <h1 className="flex items-center gap-4 text-h2">
                         <Image src={`/images/logo.svg`} alt="Michael Dam's Logo depicting a wolf howling with a moon background." width={80} height={80} title="Welcome to Michael Dam's Portfolio" />
-                        <span>
+                        <span className="hidden md:inline-block">
                             Michael Dam
                         </span>
                     </h1>
