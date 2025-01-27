@@ -1,4 +1,5 @@
 'use client'
+import ImageZoom from "@/components/ImageZoom/ImageZoom";
 import TabButton from "@/components/TabButton/TabButton";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -28,10 +29,24 @@ const About = ({ slice }: AboutProps): JSX.Element => {
     >
       <div className="container gap-8 mx-auto lg:grid lg:grid-cols-2 xl:gap-16">
 
-        {/* Image */}
-        <div className="relative object-contain mb-4 aspect-video">
-          <PrismicNextImage field={slice.primary.image} fallbackAlt="" fill className="object-contain" />
+        {/* Masonry */}
+        <div className="gap-1 select-none columns-2 md:columns-3" >
+
+          {slice.primary.masonry.map((item) => (
+            <ImageZoom>
+              <PrismicNextImage field={item.image} fallbackAlt="" sizes="100%" style={{ width: "100%", height: "auto" }} className="object-contain" />
+            </ImageZoom>
+          ))}
+
+
+
         </div>
+
+
+
+
+
+
         {/* Text */}
         <div className="relative p-6 bg-opacity-50 rounded bg-black2 backdrop-blur-sm">
           <div className="absolute top-0 left-0 w-full h-full bg-cover pattern -z-1"></div>
@@ -49,7 +64,10 @@ const About = ({ slice }: AboutProps): JSX.Element => {
           <div className="relative flex flex-wrap z-1 gap-x-8 gap-y-4">
             {slice.primary.tabs.map((item, index) => (
               <TabButton title={item.title} tab={tab} setTab={setTab} key={index}>
-                <PrismicRichText field={item.list} />
+                <div className="[&>ul]:list-disc [&>ul]:list-inside marker:text-primary">
+
+                  <PrismicRichText field={item.list} />
+                </div>
               </TabButton>
             ))}
           </div>

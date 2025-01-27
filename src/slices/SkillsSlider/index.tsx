@@ -68,7 +68,7 @@ const SkillsSlider = ({ slice }: any): JSX.Element => {
       {/* {slice.primary.direction && <h2>Skills</h2>} */}
       <div ref={sliderRef} className="text-black keen-slider">
         {slice.primary.skills.map((item: any, index: number) => (
-          <div className="p-8 keen-slider__slide" key={index}>
+          <div className="p-8 keen-slider__slide cursor-grab" key={index}>
             <div className={`imgContainer [&>img]:object-contain ${styles.aspect}`}>
               <PrismicNextImage field={item.icon} fill fallbackAlt="" sizes="(max-width: 500px) 110px, (max-width:768) 120px, 120px" />
             </div>

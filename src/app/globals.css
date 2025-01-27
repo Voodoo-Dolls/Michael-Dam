@@ -54,6 +54,10 @@ input:-webkit-autofill:focus {
   transition: background-color 0s 600000s, color 0s 600000s !important;
 }
 
+:root:has(.no-scroll){
+  overflow: hidden;
+}
+
 /* Animation */
 .circle{
   position: relative;

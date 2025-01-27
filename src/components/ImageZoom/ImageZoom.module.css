@@ -1,0 +1,7 @@
+.active{
+    @apply fixed top-0 left-0 z-50 w-full h-dvh bg-black bg-opacity-80 [&>img]:hidden flex items-center justify-center p-8 backdrop-blur-md cursor-zoom-out;
+}
+
+.default{
+    @apply w-full mb-1 break-inside-avoid cursor-zoom-in;
+}
