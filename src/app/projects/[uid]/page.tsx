@@ -5,9 +5,8 @@ import { PrismicRichText, SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { PrismicNextImage } from "@prismicio/next";
-import { IoIosList } from "react-icons/io";
+import { FaC, FaCloud } from "react-icons/fa6";
 
-import Link from "next/link";
 import Contents from "./Contents";
 
 type Params = { uid: string };
@@ -36,7 +35,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     {/* Text */}
                     <div className="xl:row-start-1 xl:col-end-8 xl:col-start-1">
                         <div className="mb-6">
-                            <h2 className="mb-6 text-h2 text-primary">{data.title}</h2>
+                            <h2 className="flex items-center gap-2 mb-6 text-h2">
+                                <span className="text-primary">
+                                    <FaCloud />
+                                </span>
+                                {data.title}
+                            </h2>
                             <div className="[&>p]:mb-4 [&>p>a]:text-primary [&>p>a]:underline">
                                 <PrismicRichText field={data.description} />
                             </div>
