@@ -26,7 +26,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
         <Toaster position="top-center" />
         <Particles id={"tsparticles"} />
       </body>

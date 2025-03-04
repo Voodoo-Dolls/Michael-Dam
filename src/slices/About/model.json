@@ -12,21 +12,12 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "masonry": {
-          "type": "Group",
+        "image": {
+          "type": "Image",
           "config": {
-            "label": "Masonry",
-            "repeat": true,
-            "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "Image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              }
-            }
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
           }
         },
         "text": {

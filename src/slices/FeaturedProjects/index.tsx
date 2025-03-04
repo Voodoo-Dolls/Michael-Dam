@@ -76,13 +76,14 @@ const FeaturedProjects = ({ slice }: FeaturedProjectsProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      id="projects"
     >
       <div className="container p-4 mx-auto">
         <h2 className="mb-8 text-center text-h2">Featured Projects </h2>
         {/* Slider */}
         <div ref={sliderRef} className="keen-slider">
-          {slice.primary.projects.map((item: any) => (
-            <div className="keen-slider__slide" key={item.project.uid}>
+          {slice.primary.projects.map((item: any, index) => (
+            <div className="keen-slider__slide" key={index}>
               <ProjectSlide uid={item.project.uid} />
             </div>
           ))}

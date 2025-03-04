@@ -182,21 +182,6 @@ export type ProjectDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument | ProjectDocument;
 
 /**
- * Item in *About → Default → Primary → Masonry*
- */
-export interface AboutSliceDefaultPrimaryMasonryItem {
-  /**
-   * Image field in *About → Default → Primary → Masonry*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.masonry[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-}
-
-/**
  * Item in *About → Default → Primary → Tabs*
  */
 export interface AboutSliceDefaultPrimaryTabsItem {
@@ -226,14 +211,14 @@ export interface AboutSliceDefaultPrimaryTabsItem {
  */
 export interface AboutSliceDefaultPrimary {
   /**
-   * Masonry field in *About → Default → Primary*
+   * Image field in *About → Default → Primary*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.masonry[]
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **API ID Path**: about.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  masonry: prismic.GroupField<Simplify<AboutSliceDefaultPrimaryMasonryItem>>;
+  image: prismic.ImageField<never>;
 
   /**
    * Text field in *About → Default → Primary*
@@ -673,7 +658,6 @@ declare module "@prismicio/client" {
       ProjectDocumentDataSlicesSlice,
       AllDocumentTypes,
       AboutSlice,
-      AboutSliceDefaultPrimaryMasonryItem,
       AboutSliceDefaultPrimaryTabsItem,
       AboutSliceDefaultPrimary,
       AboutSliceVariation,

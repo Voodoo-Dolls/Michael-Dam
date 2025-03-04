@@ -1,5 +1,5 @@
 'use client'
-import ImageZoom from "@/components/ImageZoom/ImageZoom";
+// import ImageZoom from "@/components/ImageZoom/ImageZoom";
 import TabButton from "@/components/TabButton/TabButton";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -28,9 +28,10 @@ const About = ({ slice }: AboutProps): JSX.Element => {
       className="mb-8"
     >
       <div className="container gap-8 mx-auto lg:grid lg:grid-cols-2 xl:gap-16">
-
+        {/* Image */}
+        <PrismicNextImage field={slice.primary.image} width={800} height={0} className="w-full h-auto" />
         {/* Masonry */}
-        <div className="gap-1 select-none columns-2 md:columns-3" >
+        {/* <div className="gap-1 select-none columns-2 md:columns-3" >
 
           {slice.primary.masonry.map((item) => (
             <ImageZoom>
@@ -40,7 +41,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
 
 
 
-        </div>
+        </div> */}
 
 
 

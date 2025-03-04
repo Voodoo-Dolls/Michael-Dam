@@ -12,11 +12,11 @@ interface project {
     url: string
     data: {
         title: string
-        thumbnail: {
+        thumbnail?: {
 
         }
     }
-    tags: [string]
+    tags?: [string]
 }
 export default function ProjectSlide({ uid }: props) {
     const [project, setProject] = useState<project | null>(null)
@@ -42,17 +42,19 @@ export default function ProjectSlide({ uid }: props) {
             {/* Card */}
             <Link href={project.url} className="group">
                 {/* Image */}
-                <div className={`imgContainer aspect-video mb-2 rounded border-transparent`}>
+                <div className={`imgContainer aspect-video mb-2 rounded border-transparent bg-primary`}>
                     {/* Overlay */}
                     <div className="absolute z-10 w-full h-full transition-all bg-opacity-50 opacity-0 bg-primary group-hover:opacity-50"></div>
-                    <PrismicNextImage field={data.thumbnail} fallbackAlt="" fill className="my-0" />
+                    {data.thumbnail && <PrismicNextImage field={data.thumbnail} fallbackAlt="" fill className="my-0" />}
+
                 </div>
                 {/* Title */}
                 <h3 className="text-h4 group-hover:underline line-clamp-1">{data.title}</h3>
                 {/* Tags */}
-                <div>
+                {project.tags && <div>
                     <p className="text-xs text-[#ADB7BE] line-clamp-1">{project.tags.join(", ")}</p>
-                </div>
+                </div>}
+
             </Link>
 
         </>
